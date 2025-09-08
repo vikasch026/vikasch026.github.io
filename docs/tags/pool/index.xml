@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Pool on Pseudocode</title>
-    <link>https://example.org/tags/pool/</link>
+    <link>https://vikasch026.github.io/tags/pool/</link>
     <description>Recent content in Pool on Pseudocode</description>
     <generator>Hugo -- 0.149.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/pool/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://vikasch026.github.io/tags/pool/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>8-Ball Pool: A Fun Guide for Friends</title>
-      <link>https://example.org/posts/1.pool-rules/</link>
+      <link>https://vikasch026.github.io/posts/1.pool-rules/</link>
       <pubDate>Mon, 08 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/1.pool-rules/</guid>
+      <guid>https://vikasch026.github.io/posts/1.pool-rules/</guid>
       <description>A relaxed, friendly guide to 8-Ball pool rules for casual games with friends.</description>
     </item>
   </channel>
