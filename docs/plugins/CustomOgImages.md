@@ -26,7 +26,7 @@ The Custom OG Images emitter plugin generates social media preview images for yo
 This plugin accepts the following configuration options:
 
 ```typescript title="quartz.config.ts"
-import { CustomOgImages } from "./quartz/plugins/emitters/ogImage"
+import { CustomOgImages } from "./quartz/plugins/emitters/ogImage";
 
 const config: QuartzConfig = {
   plugins: {
@@ -40,7 +40,7 @@ const config: QuartzConfig = {
       }),
     ],
   },
-}
+};
 ```
 
 ### Configuration Options
@@ -81,9 +81,11 @@ You will also be passed an array containing a header and a body font (where the 
 An example of a component using the header font could look like this:
 
 ```tsx title="socialImage.tsx"
+{% raw %}
 export const myImage: SocialImageOptions["imageStructure"] = (...) => {
   return <p style={{ fontFamily: fonts[0].name }}>Cool Header!</p>
 }
+{% endraw %}
 ```
 
 > [!example]- Local fonts
@@ -103,12 +105,15 @@ export const myImage: SocialImageOptions["imageStructure"] = (...) => {
 > Then in `quartz/util/og.tsx`, you can load the Satori fonts like so:
 >
 > ```tsx title="quartz/util/og.tsx"
-> import { joinSegments, QUARTZ } from "../path"
-> import fs from "fs"
-> import path from "path"
+> import { joinSegments, QUARTZ } from "../path";
+> import fs from "fs";
+> import path from "path";
 >
-> const newsreaderFontPath = joinSegments(QUARTZ, "static", "Newsreader.woff2")
-> export async function getSatoriFonts(headerFont: FontSpecification, bodyFont: FontSpecification) {
+> const newsreaderFontPath = joinSegments(QUARTZ, "static", "Newsreader.woff2");
+> export async function getSatoriFonts(
+>   headerFont: FontSpecification,
+>   bodyFont: FontSpecification,
+> ) {
 >   // ... rest of implementation remains same
 >   const fonts: SatoriOptions["fonts"] = [
 >     ...headerFontData.map((data, idx) => ({
@@ -129,9 +134,9 @@ export const myImage: SocialImageOptions["imageStructure"] = (...) => {
 >       weight: 400,
 >       style: "normal" as const,
 >     },
->   ]
+>   ];
 >
->   return fonts
+>   return fonts;
 > }
 > ```
 >
@@ -150,6 +155,7 @@ This example will generate images that look as follows:
 | ![[custom-social-image-preview-light.png]] | ![[custom-social-image-preview-dark.png]] |
 
 ```tsx
+{% raw %}
 import { SatoriOptions } from "satori/wasm"
 import { GlobalConfiguration } from "../cfg"
 import { SocialImageOptions, UserOpts } from "./imageHelper"
@@ -230,6 +236,7 @@ export const customImage: SocialImageOptions["imageStructure"] = (
     </div>
   )
 }
+{% endraw %}
 ```
 
 ### Advanced Example
@@ -237,6 +244,7 @@ export const customImage: SocialImageOptions["imageStructure"] = (
 The following example includes a customized social image with a custom background and formatted date:
 
 ```typescript title="custom-og.tsx"
+{% raw %}
 export const og: SocialImageOptions["Component"] = (
   cfg: GlobalConfiguration,
   fileData: QuartzPluginData,
@@ -357,4 +365,5 @@ export const og: SocialImageOptions["Component"] = (
     </div>
   )
 }
+{% endraw %}
 ```
