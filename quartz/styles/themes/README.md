@@ -1,13 +1,13 @@
-# Dracula for Obsidian
+# Composer
 
-- Theme: Dracula for Obsidian
-- Author: jarodise
+- Theme: Composer
+- Author: <a href="https://github.com/vran-dev" target="_blank" rel="noopener noreferrer">vran</a>
 
 ## Preview
 
-[Open live preview (Quartz)](https://quartz-themes.github.io/dracula-for-obsidian/)
+[Open live preview (Quartz)](https://quartz-themes.github.io/composer/)
 
-[Open live preview (Publish)](https://publish.saberzero.one/dracula-for-obsidian)
+[Open live preview (Publish)](https://publish.saberzero.one/composer)
 
 ## Usage (Quartz)
 
@@ -15,7 +15,7 @@
 
 ```yaml
 env:
-  THEME_NAME: dracula-for-obsidian
+  THEME_NAME: composer
 ```
 
 ```yaml
@@ -28,7 +28,7 @@ env:
 ```bash
 curl -s -S -o action.sh https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh
 
-./action.sh dracula-for-obsidian
+./action.sh composer
 ```
 
 ### Manual install
