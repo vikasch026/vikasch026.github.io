@@ -1,5 +1,5 @@
-import { QuartzConfig } from "./quartz/cfg"
-import * as Plugin from "./quartz/plugins"
+import { QuartzConfig } from "./quartz/cfg";
+import * as Plugin from "./quartz/plugins";
 
 /**
  * Quartz 4 Configuration
@@ -29,26 +29,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
+          light: "#f3ede9",
+          lightgray: "#e8dfd9",
           gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          darkgray: "#3a3330",
+          dark: "#8a7e76",
+          secondary: "#a98b78",
+          tertiary: "#d4c5b9",
+          highlight: "rgba(169, 146, 106, 0.1)",
+          textHighlight: "#a9926a88",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#1e252f",
+          lightgray: "#282d35",
+          gray: "#373c46",
+          darkgray: "#e3e7eb",
+          dark: "#f0f4f8",
+          secondary: "#d9bca4",
+          tertiary: "#e7dfd9",
+          highlight: "rgba(169, 146, 106, 0.1)",
+          textHighlight: "#a9926a88",
         },
       },
     },
@@ -92,6 +92,6 @@ const config: QuartzConfig = {
       Plugin.CustomOgImages(),
     ],
   },
-}
+};
 
-export default config
+export default config;
