@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Personal Blog
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
-    provider: plausible
+    provider: null
   locale: en-US
   baseUrl: vikasch026.github.io
   ignorePatterns:
@@ -21,24 +21,24 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
+        light: "#f3ede9"
+        lightgray: "#e8dfd9"
+        gray: "#b6a79d"
+        darkgray: "#554d47"
+        dark: "#3a3330"
+        secondary: "#b98679"
         tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        highlight: rgba(185, 134, 121, 0.1)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
+        light: "#1e252f"
+        lightgray: "#2a303b"
+        gray: "#5a616a"
+        darkgray: "#8d949d"
+        dark: "#e3e7eb"
+        secondary: "#d9bca4"
         tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        highlight: rgba(217, 188, 164, 0.1)
         textHighlight: "#b3aa0288"
 plugins:
   - source: github:quartz-community/created-modified-date
@@ -134,7 +134,7 @@ plugins:
       position: left
       priority: 50
   - source: github:quartz-community/graph
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 10
@@ -197,12 +197,6 @@ plugins:
     layout:
       position: afterBody
       priority: 10
-  - source: github:quartz-community/footer
-    enabled: true
-    options:
-      links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
@@ -233,6 +227,14 @@ plugins:
     layout:
       position: beforeBody
       priority: 15
+      display: all
+  - source: github:quartz-community/footer
+    enabled: true
+    options: {}
+    order: 50
+    layout:
+      position: footer
+      priority: 50
       display: all
 layout:
   groups:

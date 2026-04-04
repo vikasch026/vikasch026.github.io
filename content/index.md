@@ -1,7 +1,8 @@
 ---
 title: Welcome
 draft: false
-  -
+date:
+  - 2026-04-04
 ---
 
 Welcome to my digital garden
