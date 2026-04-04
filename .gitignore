@@ -12,6 +12,10 @@ build/
 .cache/
 public/
 
+# Quartz cache
+.quartz-cache/
+*.scssr
+
 # Environment variables
 .env
 .env.local
