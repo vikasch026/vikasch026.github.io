@@ -1,6 +1,10 @@
 @use "./base.scss";
 
-
 // put your custom CSS here!
 
 @use "themes";
+
+// Hide footer
+footer {
+  display: none !important;
+}
