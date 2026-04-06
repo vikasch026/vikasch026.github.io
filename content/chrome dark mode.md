@@ -1,8 +1,10 @@
 ---
 title: Enable Dark mode on Chrome
-draft: false
 date:
   - 2026-04-06
+draft: false
+tags:
+  - chrome
 ---
 
 I've been using Dark Reader for chrome, but sometimes it gives me very weird result.

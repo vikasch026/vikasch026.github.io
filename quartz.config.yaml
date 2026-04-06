@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Personal Blog
+  pageTitle: Maps Of Content
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -70,11 +70,14 @@ plugins:
   - source: github:quartz-community/table-of-contents
     enabled: true
     order: 50
+    layout:
+      position: right
+      priority: 20
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
       markdownLinkResolution: shortest
-      openLinksInNewTab: true 
+      openLinksInNewTab: true
     order: 60
   - source: github:quartz-community/description
     enabled: true
@@ -135,7 +138,7 @@ plugins:
       position: left
       priority: 50
   - source: github:quartz-community/graph
-    enabled: false
+    enabled: true
     layout:
       position: right
       priority: 10
