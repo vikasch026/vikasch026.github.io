@@ -16,29 +16,29 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      header: Tiempos
+      body: PT Serif
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#f3ede9"
-        lightgray: "#e8dfd9"
-        gray: "#b6a79d"
-        darkgray: "#554d47"
-        dark: "#3a3330"
-        secondary: "#b98679"
-        tertiary: "#84a59d"
-        highlight: rgba(185, 134, 121, 0.1)
+        light: "#f7f5eb"
+        lightgray: "#e0ddd7"
+        gray: "#A09D98"
+        darkgray: "#5c534b"
+        dark: "#242220"
+        secondary: "#635b8f"
+        tertiary: "#69a3d6"
+        highlight: "rgba(143, 159, 169, 0.15)"
         textHighlight: "#fff23688"
       darkMode:
-        light: "#1e252f"
-        lightgray: "#2a303b"
-        gray: "#5a616a"
-        darkgray: "#8d949d"
-        dark: "#e3e7eb"
-        secondary: "#d9bca4"
+        light: "#161618"
+        lightgray: "#393639"
+        gray: "#646464"
+        darkgray: "#d4d4d4"
+        dark: "#ebebec"
+        secondary: "#7b97aa"
         tertiary: "#84a59d"
-        highlight: rgba(217, 188, 164, 0.1)
+        highlight: "rgba(143, 159, 169, 0.15)"
         textHighlight: "#b3aa0288"
 plugins:
   - source: github:quartz-community/created-modified-date
@@ -224,7 +224,7 @@ plugins:
         - tags
         - aliases
       excludedProperties: []
-      hidePropertiesView: false
+      hidePropertiesView: true
       delimiters: ---
       language: yaml
     order: 5

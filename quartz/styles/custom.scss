@@ -2,9 +2,384 @@
 
 // put your custom CSS here!
 
-@use "themes";
+// Increase base font size from default 16px to 18px
+html {
+  font-size: 18px !important;
+}
+
+// Shiki syntax highlighting colors (code blocks)
+:root {
+  // Main theme colors for code blocks
+  --shiki-light: #24292e;
+  --shiki-light-bg: #f8f8f8;
+
+  // Token colors (light mode)
+  --shiki-color-text: #24292e;
+  --shiki-color-background: #f8f8f8;
+  --shiki-token-constant: #005cc5;
+  --shiki-token-string: #032f62;
+  --shiki-token-comment: #6a737d;
+  --shiki-token-keyword: #d73a49;
+  --shiki-token-parameter: #24292e;
+  --shiki-token-function: #24292e;
+  --shiki-token-string-expression: #22863a;
+  --shiki-token-punctuation: #24292e;
+  --shiki-token-link: #24292e;
+}
+
+[saved-theme="dark"] {
+  // Main theme colors for code blocks
+  --shiki-dark: #e1e4e8 !important;
+  --shiki-dark-bg: #24292e !important;
+
+  // Token colors (dark mode)
+  --shiki-color-text: #e1e4e8 !important;
+  --shiki-color-background: #24292e !important;
+  --shiki-token-constant: #79b8ff !important;
+  --shiki-token-string: #9ecbff !important;
+  --shiki-token-comment: #6a737d !important;
+  --shiki-token-keyword: #f97583 !important;
+  --shiki-token-parameter: #e1e4e8 !important;
+  --shiki-token-function: #e1e4e8 !important;
+  --shiki-token-string-expression: #85e89d !important;
+  --shiki-token-punctuation: #e1e4e8 !important;
+  --shiki-token-link: #e1e4e8 !important;
+}
+
+body {
+  background-image: url("/static/bg.png") !important;
+  margin: 0;
+}
+
+// Dark mode overlay
+[saved-theme="dark"] body {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/bg.png) !important;
+  background-blend-mode: multiply;
+}
+
+// Dark mode text readability improvements
+[saved-theme="dark"] {
+  // Improve text contrast on dark textured background
+  p,
+  ul,
+  ol,
+  li,
+  text,
+  .katex,
+  .math {
+    color: var(--dark) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  // Brighter links for better visibility
+  a {
+    color: #9db8cc !important; // Brighter than default #7b97aa
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      color: #b4d4e8 !important; // Even brighter on hover
+    }
+  }
+
+  // Ensure headings are clearly visible
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--dark) !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  // Tag links also get better contrast
+  a.internal.tag-link {
+    background-color: rgba(143, 159, 169, 0.25);
+    color: #9db8cc !important;
+  }
+
+  // Content meta (date/metadata) - use Socratica's light gray
+  .content-meta {
+    color: var(--gray) !important; // Light gray matching Socratica
+  }
+}
+
+@font-face {
+  font-family: "Tiempos";
+  src: url("/static/tiempos-light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* BREADCRUMB NAVIGATION */
+.breadcrumb-container {
+  flex-flow: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+}
+
+.breadcrumb-element {
+  font-family: var(--codeFont);
+  text-transform: uppercase;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  p {
+    margin: 0 0 0 0.5rem;
+    line-height: normal;
+  }
+}
+
+/* HEADER AT TOP OF WEBSITE */
+.marquee {
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  font-family: monospace;
+  white-space: nowrap;
+  height: 40px;
+}
+
+.marquee p {
+  color: white;
+  font-weight: 700;
+  animation: loopText 15s infinite linear;
+  line-height: unset;
+}
+
+@keyframes loopText {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+/* HEADER AT TOP OF WEBSITE */
+.content-container {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 128px;
+}
+
+.article-header {
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 25px;
+  border: 1px solid #5687d1;
+  background: #6096e6;
+
+  h1 {
+    color: #f9f5e9;
+    padding: 0px;
+    margin: 0;
+  }
+
+  p {
+    color: #f9f5e9;
+    padding: 0;
+    padding-top: 5px;
+    margin: 0;
+  }
+}
+
+body[data-slug="getting-started"] .article-header {
+  border: #949c61;
+  background: #9ca665;
+}
+
+body[data-slug="growing-people"] .article-header {
+  border: #ad7018;
+  background: #bd7c18;
+}
+
+body[data-slug="superboosting-ideas"] .article-header {
+  border: #9f7389;
+  background: #ac7d94;
+}
+
+body[data-slug="maintenance"] .article-header {
+  border: #d37662;
+  background: #eb846d;
+}
+
+body[data-slug="demo-days"] .article-header {
+  border: #e18fa715;
+  background: #e18fa7;
+}
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+body[data-slug="basics"] .navigation-container {
+  display: display;
+  justify-content: flex-end;
+}
+
+body[data-slug="demo-days"] .navigation-container {
+  display: display;
+  justify-content: flex-start;
+}
+
+a.navigation-button {
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid #5687d1;
+  background: #6096e6;
+  width: 17%;
+  text-align: center;
+  transition: all 0.3s;
+  transform: scale(1);
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  p {
+    color: #f9f5e9;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+body[data-slug="getting-started"] a.navigation-button {
+  border: #949c61;
+  background: #9ca665;
+}
+
+body[data-slug="growing-people"] a.navigation-button {
+  border: #ad7018;
+  background: #bd7c18;
+}
+
+body[data-slug="superboosting-ideas"] a.navigation-button {
+  border: #9f7389;
+  background: #ac7d94;
+}
+
+body[data-slug="maintenance"] a.navigation-button {
+  border: #d37662;
+  background: #eb846d;
+}
+
+body[data-slug="demo-days"] a.navigation-button {
+  border: #ab5e75;
+  background: #e18fa7;
+}
+
+.end-message {
+  border-radius: 5px;
+  padding: 25px;
+  color: #f9f5e9;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    color: #f9f5e9;
+  }
+
+  p {
+    padding: 5px 0 0;
+    margin: 0;
+    color: #f9f5e9;
+  }
+
+  .cta-button {
+    background-color: #f9f5e9;
+    border-radius: 5px;
+    border: none;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  @media screen and (max-width: 600px) {
+    text-align: center;
+
+    .cta-button {
+      display: block;
+      margin: 20px auto 0;
+    }
+  }
+}
+
+body[data-slug="basics"] .end-message {
+  border: 1px solid #5687d1;
+  background: #6096e6;
+
+  .cta-button {
+    color: #6096e6;
+  }
+}
+
+body[data-slug="getting-started"] .end-message {
+  border: 1px solid #949c61;
+  background: #9ca665;
+
+  .cta-button {
+    color: #9ca665;
+  }
+}
+
+body[data-slug="growing-people"] .end-message {
+  border: 1px solid #ad7018;
+  background: #bd7c18;
+
+  .cta-button {
+    color: #bd7c18;
+  }
+}
+
+body[data-slug="superboosting-ideas"] .end-message {
+  border: 1px solid #9f7389;
+  background: #ac7d94;
+
+  .cta-button {
+    color: #ac7d94;
+  }
+}
+
+body[data-slug="maintenance"] .end-message {
+  border: 1px solid #d37662;
+  background: #eb846d;
+
+  .cta-button {
+    color: #eb846d;
+  }
+}
+
+body[data-slug="demo-days"] .end-message {
+  border: 1px solid #ab5e75;
+  background: #e18fa7;
+
+  .cta-button {
+    color: #e18fa7;
+  }
+}
 
 // Hide footer
 footer {
   display: none !important;
+}
+
+// Garden image on home page - limit size
+img[src*="garden.png"] {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
 }

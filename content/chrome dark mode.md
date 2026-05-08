@@ -3,9 +3,9 @@ title: Enable Dark mode on Chrome
 date:
   - 2026-04-06
 draft: false
-tags:
-  - chrome
 ---
+
+#chrome #browser #darkmode
 
 I've been using Dark Reader for chrome, but sometimes it gives me very weird result.
 Searched online and people were facing the similiar issue.
@@ -21,3 +21,7 @@ chrome://flags/#enable-force-dark
 ```
 
 ![Screenshot](attachments/chrome-dark-mode.png)
+
+### Update: 
+
+I find the dark mode extension simpler than this, because it sometimes display some wierd font colors, and disabling this flag require chrome restart.
