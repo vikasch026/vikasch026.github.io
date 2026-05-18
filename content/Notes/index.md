@@ -6,4 +6,3 @@ date:
 tags:
   -
 ---
-hidden

@@ -1,9 +1,12 @@
 ---
 title: Explore
-draft: true
+draft: false
 date:
   - 2026-03-13
 ---
+## 17th May, 2026
+- OSTEP [Podcast](https://www.youtube.com/watch?v=PxmSUa3BFmw&list=PLI3TocC2xS26LoF6tSsgTLv44HTr2l2Ol)
+- 
 
 ## 6th May, 2026
 
